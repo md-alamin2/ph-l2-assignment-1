@@ -42,3 +42,16 @@ const filterByRating = (param: { title: string, rating: number }[]): { title: st
     return param.filter((item) => item.rating >= 4)
 
 }
+
+
+// problem 6
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+const printBookDetails = (book: Book) => {
+  console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable} `)
+}
