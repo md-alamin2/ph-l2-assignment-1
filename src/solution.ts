@@ -44,6 +44,12 @@ const filterByRating = (param: { title: string, rating: number }[]): { title: st
 }
 
 
+// problem 5
+const filterActiveUsers = (userArr: { id: number, name: string, email: string, isActive: boolean }[]): { id: number, name: string, email: string, isActive: boolean }[] => {
+  return userArr.filter((user) => user.isActive === true)
+}
+
+
 // problem 6
 interface Book {
   title: string;
@@ -54,4 +60,23 @@ interface Book {
 
 const printBookDetails = (book: Book) => {
   console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable} `)
+}
+
+
+// problem 7
+const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
+  const newArr: number[] = [];
+  for (let number of arr1) {
+    if (!newArr.includes(number)) {
+      newArr.push(number)
+    }
+  }
+
+  for (let number of arr2) {
+      if (!newArr.includes(number)) {
+        newArr.push(number)
+      }
+    }
+
+  return newArr
 }
