@@ -24,15 +24,21 @@ const getLength = (param: string | any[]): number => {
 
 
 // problem 3
-class Person{
+class Person {
     name: string;
     age: number;
-    constructor(name:string, age: number){
+    constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
     }
 
-    getDetails(){
+    getDetails() {
         return `Name: ${this.name}, Age: ${this.age}`
     }
+}
+
+// problem 4
+const filterByRating = (param: { title: string, rating: number }[]): { title: string, rating: number }[] => {
+    return param.filter((item) => item.rating >= 4)
+
 }
