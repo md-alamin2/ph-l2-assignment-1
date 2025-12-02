@@ -100,6 +100,6 @@ function handleShape(shape: Shape) {
 
 ## 👨‍💻 Developer
 
-**Md. Alamin**  
+**Md. Al-amin**  
 Email: [mdalamin22671@gmail.com](mdalamin22671@gmail.com)  
 GitHub: [https://github.com/md-alamin2](https://github.com/md-alamin2)
