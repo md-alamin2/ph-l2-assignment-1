@@ -1,4 +1,3 @@
-// problem-1
 const formatValue = (param: string | number | boolean): string | number | boolean => {
     if (typeof (param) === 'string') {
         return param.toUpperCase();
@@ -10,7 +9,9 @@ const formatValue = (param: string | number | boolean): string | number | boolea
 
 }
 
-// problem 2
+
+
+
 const getLength = (param: string | any[]): number => {
     if (typeof (param) === 'string') {
         return param.length
@@ -23,7 +24,8 @@ const getLength = (param: string | any[]): number => {
 }
 
 
-// problem 3
+
+
 class Person {
     name: string;
     age: number;
@@ -37,20 +39,24 @@ class Person {
     }
 }
 
-// problem 4
+
+
+
 const filterByRating = (param: { title: string, rating: number }[]): { title: string, rating: number }[] => {
     return param.filter((item) => item.rating >= 4)
 
 }
 
 
-// problem 5
+
+
 const filterActiveUsers = (userArr: { id: number, name: string, email: string, isActive: boolean }[]): { id: number, name: string, email: string, isActive: boolean }[] => {
   return userArr.filter((user) => user.isActive === true)
 }
 
 
-// problem 6
+
+
 interface Book {
   title: string;
   author: string;
@@ -63,7 +69,8 @@ const printBookDetails = (book: Book) => {
 }
 
 
-// problem 7
+
+
 const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
   const newArr: number[] = [];
   for (let number of arr1) {
@@ -82,7 +89,9 @@ const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
 }
 
 
-// problem 8
+
+
+
 type Product = {
     name: string;
     price: number;
