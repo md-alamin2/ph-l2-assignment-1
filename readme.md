@@ -81,19 +81,8 @@ if (typeof value === "string") {
 - `never` যেকোনো টাইপে অ্যাসাইন করা যায়, কিন্তু যেকোনো টাইপ `never`-এ অ্যাসাইন করা যায় না (`never` ছাড়া)।
 
 ```bash
-function throwError(message: string): never {
-  throw new Error(message);
-}
-
-type Shape = Circle | Square;
-function handleShape(shape: Shape) {
-  switch (shape.kind) {
-    case "circle": return handleCircle(shape);
-    case "square": return handleSquare(shape);
-    default:
-      const _exhaustive: never = shape; // কোনো কেস মিস করলে এরর
-      return _exhaustive;
-  }
+function throwError(): never {
+  throw new Error("Something went wrong");
 }
 ```
 
