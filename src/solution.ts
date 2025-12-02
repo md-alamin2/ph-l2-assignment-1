@@ -80,3 +80,32 @@ const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
 
   return newArr
 }
+
+
+// problem 8
+type Product = {
+    name: string;
+    price: number;
+    quantity: number;
+    discount?: number
+}
+
+const calculateTotalPrice = (productArr: Product[]): number => {
+    productArr.length === 0 && 0;
+
+    const total: number = productArr.reduce((previousValue: number, currentValue: Product): number => {
+        const { price, quantity, discount } = currentValue;
+
+        const totalWithoutDiscount: number = price * quantity;
+
+        const discountedPrice: number = discount ?
+            (totalWithoutDiscount - ((discount * totalWithoutDiscount) / 100))
+            : totalWithoutDiscount;
+
+        const totalDiscountPrice: number = previousValue + discountedPrice;
+
+        return totalDiscountPrice
+    }, 0)
+
+    return total
+}
