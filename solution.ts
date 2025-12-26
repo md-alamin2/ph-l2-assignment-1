@@ -65,7 +65,7 @@ interface Book {
 }
 
 const printBookDetails = (book: Book) => {
-  console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable} `)
+  console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable === true ? "Yes": "No"} `)
 }
 
 
