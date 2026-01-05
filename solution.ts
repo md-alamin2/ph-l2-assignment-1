@@ -74,7 +74,7 @@ const printBookDetails = (book: Book) => {
 const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
   const newArr: number[] = [];
 
-  // check values from arr1
+
   for (let i = 0; i < arr1.length; i++) {
     let exists = false;
 
@@ -90,7 +90,6 @@ const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
     }
   }
 
-  // check values from arr2
   for (let i = 0; i < arr2.length; i++) {
     let exists = false;
 
