@@ -73,20 +73,42 @@ const printBookDetails = (book: Book) => {
 
 const getUniqueValues = (arr1: number[], arr2: number[]): number[] => {
   const newArr: number[] = [];
-  for (let number of arr1) {
-    if (!newArr.includes(number)) {
-      newArr.push(number)
-    }
-  }
 
-  for (let number of arr2) {
-      if (!newArr.includes(number)) {
-        newArr.push(number)
+  // check values from arr1
+  for (let i = 0; i < arr1.length; i++) {
+    let exists = false;
+
+    for (let j = 0; j < newArr.length; j++) {
+      if (arr1[i] === newArr[j]) {
+        exists = true;
+        break;
       }
     }
 
-  return newArr
-}
+    if (!exists) {
+      newArr.push(arr1[i]);
+    }
+  }
+
+  // check values from arr2
+  for (let i = 0; i < arr2.length; i++) {
+    let exists = false;
+
+    for (let j = 0; j < newArr.length; j++) {
+      if (arr2[i] === newArr[j]) {
+        exists = true;
+        break;
+      }
+    }
+
+    if (!exists) {
+      newArr.push(arr2[i]);
+    }
+  }
+
+  return newArr;
+};
+
 
 
 
